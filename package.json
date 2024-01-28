@@ -15,10 +15,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "publish": "yarn npm publish",
-    "git:push": "git add tsconfig.json && yarn run git:commit-and-push",
-    "git:commit-and-push": "yarn run git:prompt-commit && git push",
-    "git:prompt-commit": "node -e \"const readline = require('readline'); const rl = readline.createInterface({ input: process.stdin, output: process.stdout }); rl.question('Enter commit message: ', (answer) => { console.log(answer); rl.close(); });\""
+    "publish": "yarn npm publish"
   },
   "repository": {
     "type": "git",
