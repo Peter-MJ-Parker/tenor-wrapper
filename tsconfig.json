@@ -17,8 +17,7 @@
     "declaration": true,
     "declarationMap": true,
     "moduleResolution": "Node",
-    // Add other options as needed
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "dist"],
+  "include": ["./src", "./src/**/*.d.ts"],
 }
