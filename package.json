@@ -1,0 +1,60 @@
+{
+  "name": "@sarentu/tenor",
+  "version": "1.0.0",
+  "description": "An api wrapper for version 2 Tenor's API made by Google.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "publish": "yarn npm publish",
+    "git:push": "git add tsconfig.json && yarn run git:commit-and-push",
+    "git:commit-and-push": "yarn run git:prompt-commit && git push",
+    "git:prompt-commit": "node -e \"const readline = require('readline'); const rl = readline.createInterface({ input: process.stdin, output: process.stdout }); rl.question('Enter commit message: ', (answer) => { console.log(answer); rl.close(); });\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Peter-MJ-Parker/tenor-wrapper.git"
+  },
+  "keywords": [
+    "Tenor",
+    "api",
+    "wrapper",
+    "google",
+    "googleapis",
+    "gif",
+    "gifs"
+  ],
+  "author": "Peter-MJ-Parker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Peter-MJ-Parker/tenor-wrapper/issues"
+  },
+  "homepage": "https://github.com/Peter-MJ-Parker/tenor-wrapper#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.9",
+    "prettier": "^3.2.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "undici": "^6.5.0"
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 100,
+    "tabWidth": 2,
+    "arrowParens": "avoid"
+  },
+  "packageManager": "yarn@4.0.2"
+}
